@@ -10,14 +10,14 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CityModelHttp {
+public class CityHttpModel {
 
     @JsonProperty("id")
     private Long id;
     @JsonProperty("nome")
     private String nome;
     @JsonProperty("microrregiao")
-    private StateMicroRegionModelHttp microRegiao;
+    private StateMicroRegionHttpModel microRegiao;
 
 }
 

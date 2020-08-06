@@ -1,7 +1,5 @@
 package com.br.print.dataprovider;
 
-import com.br.print.core.usecase.http.CityModelHttp;
-import com.br.print.core.usecase.http.StateModelHttp;
 import com.br.print.dataprovider.feign.PlaceFeign;
 import com.br.print.dataprovider.gateway.PlaceGateway;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +17,11 @@ public class PlaceDataProvider implements PlaceGateway {
         this.placeFeign = placeFeign;
     }
 
-    public List<StateModelHttp> listStates(){
+    public List<Object> listStates(){
         return this.placeFeign.listStates();
     }
 
-    public List<CityModelHttp> listCitiesByState(String uf){
+    public List<Object> listCitiesByState(String uf){
         return this.placeFeign.listCitiesByState(uf);
     }
 

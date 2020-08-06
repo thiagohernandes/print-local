@@ -1,5 +1,6 @@
 package com.br.print.core.usecase.http;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,11 +10,15 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class StateModelHttp {
+public class StateHttpModel {
 
+    @JsonProperty("id")
     private Long id;
+    @JsonProperty("sigla")
     private String sigla;
+    @JsonProperty("nome")
     private String nome;
-    private StateRegionModelHttp regiao;
+    @JsonProperty("regiao")
+    private StateRegionHttpModel regiao;
 
 }

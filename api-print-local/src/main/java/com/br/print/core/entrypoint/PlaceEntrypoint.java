@@ -1,8 +1,6 @@
 package com.br.print.core.entrypoint;
 
 import com.br.print.core.usecase.StateUseCase;
-import com.br.print.core.usecase.http.CityModelHttp;
-import com.br.print.core.usecase.http.StateModelHttp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,14 +23,15 @@ public class PlaceEntrypoint {
     }
 
     @GetMapping("/states")
-    public ResponseEntity<List<StateModelHttp>> listStates(){
+    public ResponseEntity<List<Object>> listStates(){
        return ResponseEntity.status(HttpStatus.OK)
                             .body(this.stateUseCase.listStates());
     }
 
     @GetMapping("/states/{uf}/cities")
-    public ResponseEntity<List<CityModelHttp>> listCitiesByState(@PathVariable("uf") String uf){
+    public ResponseEntity<List<Object>> listCitiesByState(@PathVariable("uf") String uf){
         return ResponseEntity.status(HttpStatus.OK)
-                .body(this.stateUseCase.listCitiesByState(uf));
+                             .body(this.stateUseCase.listCitiesByState(uf));
     }
+
 }

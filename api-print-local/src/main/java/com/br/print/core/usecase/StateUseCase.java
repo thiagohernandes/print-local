@@ -1,7 +1,5 @@
 package com.br.print.core.usecase;
 
-import com.br.print.core.usecase.http.CityModelHttp;
-import com.br.print.core.usecase.http.StateModelHttp;
 import com.br.print.dataprovider.PlaceDataProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -18,11 +16,11 @@ public class StateUseCase {
         this.placeDataProvider = placeDataProvider;
     }
 
-    public List<StateModelHttp> listStates() {
+    public List<Object> listStates() {
         return this.placeDataProvider.listStates();
     }
 
-    public List<CityModelHttp> listCitiesByState(String uf) {
+    public List<Object> listCitiesByState(String uf) {
         return this.placeDataProvider.listCitiesByState(uf);
     }
 }
