@@ -64,7 +64,7 @@
 2020-08-06 10:29:23,202 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
 2020-08-06 10:29:23,306 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
 2020-08-06 10:29:23,306 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2667 ms
-2020-08-06 10:29:23,387 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stateEntrypoint' defined in file [/home/thiago/dev/challenges/print-local/api-print-local/target/classes/com/br/print/core/entrypoint/StateEntrypoint.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stateUseCase' defined in file [/home/thiago/dev/challenges/print-local/api-print-local/target/classes/com/br/print/core/usecase/StateUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.br.print.dataprovider.gateway.StateGateway' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-08-06 10:29:23,387 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stateEntrypoint' defined in file [/home/thiago/dev/challenges/print-local/api-print-local/target/classes/com/br/print/core/entrypoint/StateEntrypoint.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stateUseCase' defined in file [/home/thiago/dev/challenges/print-local/api-print-local/target/classes/com/br/print/core/usecase/StateUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.br.print.dataprovider.gateway.PlaceGateway' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 2020-08-06 10:29:23,389 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
 2020-08-06 10:29:23,401 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
 
@@ -77,12 +77,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.br.print.core.usecase.StateUseCase required a bean of type 'com.br.print.dataprovider.gateway.StateGateway' that could not be found.
+Parameter 0 of constructor in com.br.print.core.usecase.StateUseCase required a bean of type 'com.br.print.dataprovider.gateway.PlaceGateway' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.br.print.dataprovider.gateway.StateGateway' in your configuration.
+Consider defining a bean of type 'com.br.print.dataprovider.gateway.PlaceGateway' in your configuration.
 
 2020-08-06 10:29:40,194 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2020-08-06 10:29:40,398 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$83d99509] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
@@ -95,7 +95,7 @@ Consider defining a bean of type 'com.br.print.dataprovider.gateway.StateGateway
 2020-08-06 10:29:41,743 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
 2020-08-06 10:29:41,806 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
 2020-08-06 10:29:41,807 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1249 ms
-2020-08-06 10:29:41,849 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stateEntrypoint' defined in file [/home/thiago/dev/challenges/print-local/api-print-local/target/classes/com/br/print/core/entrypoint/StateEntrypoint.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stateUseCase' defined in file [/home/thiago/dev/challenges/print-local/api-print-local/target/classes/com/br/print/core/usecase/StateUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.br.print.dataprovider.gateway.StateGateway' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-08-06 10:29:41,849 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stateEntrypoint' defined in file [/home/thiago/dev/challenges/print-local/api-print-local/target/classes/com/br/print/core/entrypoint/StateEntrypoint.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'stateUseCase' defined in file [/home/thiago/dev/challenges/print-local/api-print-local/target/classes/com/br/print/core/usecase/StateUseCase.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.br.print.dataprovider.gateway.PlaceGateway' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 2020-08-06 10:29:41,850 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
 2020-08-06 10:29:41,862 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
 
@@ -108,12 +108,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.br.print.core.usecase.StateUseCase required a bean of type 'com.br.print.dataprovider.gateway.StateGateway' that could not be found.
+Parameter 0 of constructor in com.br.print.core.usecase.StateUseCase required a bean of type 'com.br.print.dataprovider.gateway.PlaceGateway' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.br.print.dataprovider.gateway.StateGateway' in your configuration.
+Consider defining a bean of type 'com.br.print.dataprovider.gateway.PlaceGateway' in your configuration.
 
 2020-08-06 10:31:22,869 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2020-08-06 10:31:23,075 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$657c3f2e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
@@ -316,7 +316,7 @@ java.lang.IllegalStateException: Either 'name' or 'value' must be provided in @F
 2020-08-06 11:22:51,708 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$feddc55a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-08-06 11:22:51,861 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
 2020-08-06 11:22:53,106 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=8945c7a2-7cc4-38ab-8c7f-f91799642641
-2020-08-06 11:22:53,352 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'com.br.print.dataprovider.feign.StateFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-06 11:22:53,352 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'com.br.print.dataprovider.feign.PlaceFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-08-06 11:22:53,540 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$feddc55a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 2020-08-06 11:22:54,453 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
 2020-08-06 11:22:54,468 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
@@ -344,3 +344,67 @@ java.lang.IllegalStateException: Either 'name' or 'value' must be provided in @F
 2020-08-06 11:24:29,780 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-08-06 11:24:29,941 WARN com.netflix.config.sources.URLConfigurationSource [SpringContextShutdownHook] No URLs will be polled as dynamic configuration sources.
 2020-08-06 11:24:29,941 INFO com.netflix.config.sources.URLConfigurationSource [SpringContextShutdownHook] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-06 11:28:47,665 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-06 11:28:48,117 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$9ab8ed88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-06 11:28:48,423 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-06 11:28:50,894 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=8945c7a2-7cc4-38ab-8c7f-f91799642641
+2020-08-06 11:28:51,135 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'com.br.print.dataprovider.feign.PlaceFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-06 11:28:51,367 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$9ab8ed88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-06 11:28:53,066 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-06 11:28:53,078 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-06 11:28:53,079 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-06 11:28:53,079 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-06 11:28:53,293 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-06 11:28:53,294 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 4755 ms
+2020-08-06 11:28:53,826 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-06 11:28:54,436 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-06 11:28:54,527 WARN org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration [restartedMain] No spring.application.name found, defaulting to 'application'
+2020-08-06 11:28:54,550 WARN com.netflix.config.sources.URLConfigurationSource [restartedMain] No URLs will be polled as dynamic configuration sources.
+2020-08-06 11:28:54,550 INFO com.netflix.config.sources.URLConfigurationSource [restartedMain] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-06 11:28:54,576 WARN com.netflix.config.sources.URLConfigurationSource [restartedMain] No URLs will be polled as dynamic configuration sources.
+2020-08-06 11:28:54,576 INFO com.netflix.config.sources.URLConfigurationSource [restartedMain] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-06 11:28:54,748 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-06 11:28:54,956 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-06 11:28:54,977 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-06 11:28:54,988 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-08-06 11:28:55,017 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-08-06 11:28:55,058 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-08-06 11:28:55,351 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ApiPrintLocalApplication in 9.254 seconds (JVM running for 10.881)
+2020-08-06 11:29:13,655 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-06 11:29:13,656 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-06 11:29:13,669 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 12 ms
+2020-08-06 11:32:00,764 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-06 11:32:02,799 WARN com.netflix.config.sources.URLConfigurationSource [SpringContextShutdownHook] No URLs will be polled as dynamic configuration sources.
+2020-08-06 11:32:02,800 INFO com.netflix.config.sources.URLConfigurationSource [SpringContextShutdownHook] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-06 12:14:15,451 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-06 12:14:15,760 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$41da3950] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-06 12:14:15,885 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-08-06 12:14:17,051 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=8314d093-f889-3726-93fa-94793e9c2d99
+2020-08-06 12:14:17,320 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'com.br.print.dataprovider.feign.PlaceFeign' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-06 12:14:17,531 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$41da3950] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-06 12:14:18,316 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-08-06 12:14:18,327 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-06 12:14:18,327 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-08-06 12:14:18,328 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-08-06 12:14:18,458 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-08-06 12:14:18,458 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2547 ms
+2020-08-06 12:14:18,784 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-08-06 12:14:19,516 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-08-06 12:14:19,601 WARN org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration [restartedMain] No spring.application.name found, defaulting to 'application'
+2020-08-06 12:14:19,606 WARN com.netflix.config.sources.URLConfigurationSource [restartedMain] No URLs will be polled as dynamic configuration sources.
+2020-08-06 12:14:19,606 INFO com.netflix.config.sources.URLConfigurationSource [restartedMain] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-06 12:14:19,679 WARN com.netflix.config.sources.URLConfigurationSource [restartedMain] No URLs will be polled as dynamic configuration sources.
+2020-08-06 12:14:19,679 INFO com.netflix.config.sources.URLConfigurationSource [restartedMain] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-06 12:14:19,837 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-06 12:14:20,081 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-06 12:14:20,104 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-06 12:14:20,116 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-08-06 12:14:20,135 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-08-06 12:14:20,159 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-08-06 12:14:20,327 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started ApiPrintLocalApplication in 5.938 seconds (JVM running for 7.265)
+2020-08-06 12:14:40,964 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-06 12:14:40,965 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-08-06 12:14:40,974 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 9 ms
+2020-08-06 12:15:42,723 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-06 12:15:42,735 WARN com.netflix.config.sources.URLConfigurationSource [SpringContextShutdownHook] No URLs will be polled as dynamic configuration sources.
+2020-08-06 12:15:42,735 INFO com.netflix.config.sources.URLConfigurationSource [SpringContextShutdownHook] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
