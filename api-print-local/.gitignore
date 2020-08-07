@@ -1,5 +1,6 @@
 ### General ###
 /logs
+/ehcache
 
 HELP.md
 target/

@@ -3,7 +3,9 @@ package com.br.print.core.handler;
 import com.br.print.core.handler.exception.HandlerExceptionNotFound;
 import com.br.print.core.handler.exception.HandlerValidationException;
 import com.br.print.core.handler.http.HandlerGenericHttpResponse;
+import com.br.print.core.util.ApiUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -19,11 +21,18 @@ import java.time.format.DateTimeFormatter;
 @ControllerAdvice
 public class HandlerGenericHttpRequest {
 
+    @Autowired
+    private final ApiUtil apiUtil;
+
     private final String MESSAGE_RESOURCE_NOT_FOUND = "URL não encontrada para a requisição";
     private final String ERROR_UNKNOW = "Erro desconhecido";
     private final int CODE_404 = 404;
     private final int CODE_400 = 400;
     private final int CODE_500 = 500;
+
+    public HandlerGenericHttpRequest(final ApiUtil apiUtil) {
+        this.apiUtil = apiUtil;
+    }
 
     @ExceptionHandler({HandlerExceptionNotFound.class})
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
@@ -60,11 +69,9 @@ public class HandlerGenericHttpRequest {
 
     private HandlerGenericHttpResponse exceptionResponseHandler(String requestURI, String errorMessage,
                                                                 int statusCode, String method) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-        String dateTimeFormated = LocalDateTime.now().format(formatter);
         return HandlerGenericHttpResponse.builder()
                                          .calledUrl(requestURI)
-                                         .dateTime(dateTimeFormated)
+                                         .dateTime(apiUtil.dateTimeFormated())
                                          .errorMessage(errorMessage)
                                          .statusCode(statusCode)
                                          .method(method)
