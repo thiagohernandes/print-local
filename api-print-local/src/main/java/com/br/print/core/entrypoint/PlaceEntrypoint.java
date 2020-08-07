@@ -1,5 +1,7 @@
 package com.br.print.core.entrypoint;
 
+import com.br.print.core.handler.exception.HandlerExceptionNotFound;
+import com.br.print.core.handler.exception.HandlerValidationException;
 import com.br.print.core.usecase.StateUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@RestController()
 @RequestMapping("/v1/places")
 public class PlaceEntrypoint {
 
@@ -23,7 +25,7 @@ public class PlaceEntrypoint {
     }
 
     @GetMapping("/states")
-    public ResponseEntity<List<Object>> listStates(){
+    public ResponseEntity<List<Object>> listStates() throws Exception {
        return ResponseEntity.status(HttpStatus.OK)
                             .body(this.stateUseCase.listStates());
     }

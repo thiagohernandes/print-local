@@ -25,7 +25,7 @@ public class HandlerGenericHttpRequest {
     private final int CODE_400 = 400;
     private final int CODE_500 = 500;
 
-    @ExceptionHandler(HandlerExceptionNotFound.class)
+    @ExceptionHandler({HandlerExceptionNotFound.class})
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public @ResponseBody HandlerGenericHttpResponse handlerResourceNotFound(final HandlerExceptionNotFound exception,
                                                        final HttpServletRequest request) {
@@ -33,7 +33,7 @@ public class HandlerGenericHttpRequest {
         return exceptionResponseHandler(request.getRequestURI(),exception.getMessage(),CODE_404,request.getMethod());
     }
 
-    @ExceptionHandler(NoHandlerFoundException.class)
+    @ExceptionHandler({NoHandlerFoundException.class})
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public @ResponseBody HandlerGenericHttpResponse handleNoHandlerFound(final NoHandlerFoundException exception,
                                                                          final HttpServletRequest request) {
@@ -41,7 +41,7 @@ public class HandlerGenericHttpRequest {
         return exceptionResponseHandler(request.getRequestURI(),MESSAGE_RESOURCE_NOT_FOUND,CODE_404,request.getMethod());
     }
 
-    @ExceptionHandler(HandlerValidationException.class)
+    @ExceptionHandler({HandlerValidationException.class})
     @ResponseStatus(value = HttpStatus.BAD_REQUEST)
     public @ResponseBody HandlerGenericHttpResponse handlerResourceValidation (final HandlerValidationException exception,
                                                                                final HttpServletRequest request) {
@@ -49,7 +49,7 @@ public class HandlerGenericHttpRequest {
         return exceptionResponseHandler(request.getRequestURI(),exception.getMessage(),CODE_400,request.getMethod());
     }
 
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler({Exception.class})
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
     public @ResponseBody HandlerGenericHttpResponse handlerException (final Exception exception,
                                                                       final HttpServletRequest request) {
