@@ -12,9 +12,9 @@ import java.util.List;
 public interface PlaceFeign {
 
     @RequestMapping(method = RequestMethod.GET, value = "/localidades/estados")
-    public List<Object> listStates();
+    List<Object> listStates();
 
     @RequestMapping(method = RequestMethod.GET, value = "/localidades/estados/{uf}/municipios")
-    public List<Object> listCitiesByState(@PathVariable("uf") String uf);
+    List<Object> listCitiesByState(@PathVariable("uf") String uf);
 
 }

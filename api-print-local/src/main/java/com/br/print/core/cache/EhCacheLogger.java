@@ -4,10 +4,7 @@ import com.br.print.core.util.ApiUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.ehcache.event.CacheEvent;
 import org.ehcache.event.CacheEventListener;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-
-import java.time.LocalDateTime;
 
 @Slf4j
 @Configuration
