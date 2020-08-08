@@ -10031,3 +10031,73 @@ Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unr
 2020-08-07 22:57:34,927 INFO com.br.print.core.cache.EhCacheLogger [Ehcache [_default_]-0] Cache key: SP | Cache emited: 07/08/2020 22:57:34 
 2020-08-07 22:57:51,536 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
 2020-08-07 22:57:52,054 INFO org.ehcache.core.EhcacheManager [SpringContextShutdownHook] Cache 'stateCities' removed from EhcacheManager.
+2020-08-08 17:51:07,822 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 17:51:07,857 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 17:51:07,861 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 4 ms
+2020-08-08 17:51:07,955 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states-invalid
+2020-08-08 17:51:08,379 ERROR com.br.print.core.handler.HandlerGenericHttpRequest [main] Error: null | URL requisitada: null | Código de erro: 404 | Método: null
+com.br.print.core.handler.exception.HandlerExceptionNotFound$MockitoMock$1512949205: null
+2020-08-08 18:00:24,850 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 18:00:24,874 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 18:00:24,878 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 3 ms
+2020-08-08 18:00:24,957 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states-invalid
+2020-08-08 18:00:25,174 ERROR com.br.print.core.handler.HandlerGenericHttpRequest [main] Error: null | URL requisitada: null | Código de erro: 404 | Método: null
+com.br.print.core.handler.exception.HandlerExceptionNotFound$MockitoMock$1910704255: null
+2020-08-08 18:00:25,223 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 18:00:25,223 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 18:00:25,224 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 0 ms
+2020-08-08 18:00:25,225 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states/not-valid
+2020-08-08 18:00:25,268 ERROR com.br.print.core.handler.HandlerGenericHttpRequest [main] Error: null | URL requisitada: null | Código de erro: 404 | Método: null
+org.springframework.web.servlet.NoHandlerFoundException$MockitoMock$128710501: null
+2020-08-08 18:00:25,284 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 18:00:25,284 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 18:00:25,285 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 0 ms
+2020-08-08 18:00:25,286 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states
+2020-08-08 18:01:43,667 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 18:01:43,670 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 18:01:43,673 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 2 ms
+2020-08-08 18:01:43,734 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states/
+2020-08-08 18:01:43,879 ERROR com.br.print.core.handler.HandlerGenericHttpRequest [main] Error: null | URL requisitada: null | Código de erro: 400 | Método: null
+com.br.print.core.handler.exception.HandlerValidationException$MockitoMock$1833041797: null
+2020-08-08 18:01:54,814 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 18:01:54,817 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 18:01:54,820 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 3 ms
+2020-08-08 18:01:54,878 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states-invalid
+2020-08-08 18:01:55,076 ERROR com.br.print.core.handler.HandlerGenericHttpRequest [main] Error: null | URL requisitada: null | Código de erro: 404 | Método: null
+com.br.print.core.handler.exception.HandlerExceptionNotFound$MockitoMock$1023118845: null
+2020-08-08 18:01:55,098 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 18:01:55,099 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 18:01:55,099 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 0 ms
+2020-08-08 18:01:55,100 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states/not-valid
+2020-08-08 18:01:55,146 ERROR com.br.print.core.handler.HandlerGenericHttpRequest [main] Error: null | URL requisitada: null | Código de erro: 404 | Método: null
+org.springframework.web.servlet.NoHandlerFoundException$MockitoMock$588262575: null
+2020-08-08 18:01:55,163 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 18:01:55,163 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 18:01:55,164 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 0 ms
+2020-08-08 18:01:55,165 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states/
+2020-08-08 18:01:55,219 ERROR com.br.print.core.handler.HandlerGenericHttpRequest [main] Error: null | URL requisitada: null | Código de erro: 400 | Método: null
+com.br.print.core.handler.exception.HandlerValidationException$MockitoMock$548073501: null
+2020-08-08 18:03:12,770 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 18:03:12,773 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 18:03:12,776 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 3 ms
+2020-08-08 18:03:12,829 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states-invalid
+2020-08-08 18:03:13,004 ERROR com.br.print.core.handler.HandlerGenericHttpRequest [main] Error: null | URL requisitada: null | Código de erro: 404 | Método: null
+com.br.print.core.handler.exception.HandlerExceptionNotFound$MockitoMock$672899436: null
+2020-08-08 18:03:13,023 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 18:03:13,023 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 18:03:13,024 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 0 ms
+2020-08-08 18:03:13,025 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states/not-valid
+2020-08-08 18:03:13,061 ERROR com.br.print.core.handler.HandlerGenericHttpRequest [main] Error: null | URL requisitada: null | Código de erro: 404 | Método: null
+org.springframework.web.servlet.NoHandlerFoundException$MockitoMock$1510162349: null
+2020-08-08 18:03:13,076 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 18:03:13,077 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 18:03:13,077 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 0 ms
+2020-08-08 18:03:13,078 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states/
+2020-08-08 18:03:13,124 ERROR com.br.print.core.handler.HandlerGenericHttpRequest [main] Error: null | URL requisitada: null | Código de erro: 400 | Método: null
+com.br.print.core.handler.exception.HandlerValidationException$MockitoMock$1986305868: null
+2020-08-08 18:03:13,138 INFO org.springframework.mock.web.MockServletContext [main] Initializing Spring TestDispatcherServlet ''
+2020-08-08 18:03:13,138 INFO org.springframework.web.servlet.FrameworkServlet [main] Initializing Servlet ''
+2020-08-08 18:03:13,138 INFO org.springframework.web.servlet.FrameworkServlet [main] Completed initialization in 0 ms
+2020-08-08 18:03:13,139 WARN org.springframework.web.servlet.DispatcherServlet [main] No mapping for GET /states/
+2020-08-08 18:03:13,164 ERROR com.br.print.core.handler.HandlerGenericHttpRequest [main] Error: null | URL requisitada: null | Código de erro: 500 | Método: null
+org.mockito.codegen.Exception$MockitoMock$1523459702: null

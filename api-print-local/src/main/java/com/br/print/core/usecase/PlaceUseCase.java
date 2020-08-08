@@ -10,12 +10,12 @@ import java.io.IOException;
 import java.util.List;
 
 @Component
-public class StateUseCase {
+public class PlaceUseCase {
 
     private final PlaceDataProvider placeDataProvider;
 
     @Autowired
-    public StateUseCase(final PlaceDataProvider placeDataProvider) {
+    public PlaceUseCase(final PlaceDataProvider placeDataProvider) {
         this.placeDataProvider = placeDataProvider;
     }
 

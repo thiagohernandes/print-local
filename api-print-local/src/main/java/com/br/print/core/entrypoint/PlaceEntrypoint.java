@@ -1,6 +1,6 @@
 package com.br.print.core.entrypoint;
 
-import com.br.print.core.usecase.StateUseCase;
+import com.br.print.core.usecase.PlaceUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
@@ -19,10 +19,10 @@ import java.util.List;
 @RequestMapping("/v1/places")
 public class PlaceEntrypoint {
 
-    private final StateUseCase stateUseCase;
+    private final PlaceUseCase stateUseCase;
 
     @Autowired
-    public PlaceEntrypoint(final StateUseCase stateUseCase) {
+    public PlaceEntrypoint(final PlaceUseCase stateUseCase) {
         this.stateUseCase = stateUseCase;
     }
 
