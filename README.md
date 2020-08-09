@@ -16,6 +16,7 @@ API para busca de estados e cidades do Brasil
 
 ```bash
 git clone git@github.com:thiagohernandes/print-local.git
+cd print-local
 mvn clean test package
 mvn spring-boot:run
 ```
