@@ -2,9 +2,6 @@ package com.br.print.core.entrypoint;
 
 import com.br.print.builder.data.PlaceBuildDataTest;
 import com.br.print.core.usecase.PlaceUseCase;
-import com.br.print.core.usecase.http.*;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -16,7 +13,6 @@ import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.ResponseEntity;
 
 import java.io.ByteArrayInputStream;
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertNotNull;

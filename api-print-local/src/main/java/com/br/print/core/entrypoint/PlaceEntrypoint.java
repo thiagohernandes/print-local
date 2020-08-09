@@ -1,6 +1,8 @@
 package com.br.print.core.entrypoint;
 
 import com.br.print.core.usecase.PlaceUseCase;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
@@ -17,6 +19,7 @@ import java.util.List;
 
 @RestController()
 @RequestMapping("/v1/places")
+@Api(value = "Places")
 public class PlaceEntrypoint {
 
     private final PlaceUseCase stateUseCase;
@@ -26,18 +29,21 @@ public class PlaceEntrypoint {
         this.stateUseCase = stateUseCase;
     }
 
+    @ApiOperation(value = "Retorna a lista de estados brasileiros")
     @GetMapping("/states")
     public ResponseEntity<List<Object>> listStates() throws Exception {
        return ResponseEntity.status(HttpStatus.OK)
                             .body(this.stateUseCase.listStates());
     }
 
+    @ApiOperation(value = "Retorna a lista de cidades por unidade federativa brasileira")
     @GetMapping("/states/{uf}/cities")
     public ResponseEntity<List<Object>> listCitiesByState(@PathVariable("uf") String uf){
         return ResponseEntity.status(HttpStatus.OK)
                              .body(this.stateUseCase.listCitiesByState(uf));
     }
 
+    @ApiOperation(value = "Retorna o PDF com a lista de cidades por unidade federativa brasileira")
     @GetMapping(value = "/states/{uf}/cities/pdf", produces = MediaType.APPLICATION_PDF_VALUE)
     public ResponseEntity<InputStreamResource> listCitiesByStatePdfReport(@PathVariable("uf") String uf) throws IOException {
         HttpHeaders headers = new HttpHeaders();

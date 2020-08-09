@@ -1,10 +1,7 @@
 package com.br.print.dataprovider;
 
 import com.br.print.builder.data.PlaceBuildDataTest;
-import com.br.print.core.usecase.http.*;
 import com.br.print.dataprovider.feign.PlaceFeign;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -14,7 +11,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertNotNull;
