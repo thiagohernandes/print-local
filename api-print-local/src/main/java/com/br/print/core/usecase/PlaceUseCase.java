@@ -1,7 +1,6 @@
 package com.br.print.core.usecase;
 
 import com.br.print.dataprovider.PlaceDataProvider;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -30,4 +29,5 @@ public class PlaceUseCase {
     public ByteArrayInputStream citiesPdfReport(String uf) throws IOException {
         return this.placeDataProvider.citiesPdfReport(uf);
     }
+
 }
