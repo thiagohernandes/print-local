@@ -10,6 +10,6 @@ public interface PlaceGateway {
 
     List<Object> listCitiesByState(String uf);
 
-    ByteArrayInputStream citiesPdfReport(String uf) throws IOException;
+    byte[] citiesPdfReport(String uf) throws IOException;
 
 }
