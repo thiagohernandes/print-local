@@ -4,6 +4,8 @@ import com.br.print.core.usecase.http.FallbackHttModel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import java.time.LocalDateTime;
@@ -17,16 +19,20 @@ public class PlaceFallbackDataProviderTest {
     private final String methodAccessedListStates = "listStates()";
     private final String methodAccessedListCitiesByState = "listCitiesByState()";
 
-    @InjectMocks
+    @Mock
     private PlaceFallbackDataProvider placeFallbackDataProvider;
 
     @Test
     public void listStates__Fallback__Test() {
+        Mockito.when(this.placeFallbackDataProvider.listStates())
+                .thenReturn(makeMockListStates());
         this.placeFallbackDataProvider.listStates();
     }
 
     @Test
     public void listCitiesByState__Fallback__Test() {
+        Mockito.when(this.placeFallbackDataProvider.listCitiesByState("MG"))
+                .thenReturn(listCitiesByState());
         this.placeFallbackDataProvider.listCitiesByState("MG");
     }
 

@@ -26,7 +26,7 @@ public class PlaceUseCase {
         return this.placeDataProvider.listCitiesByState(uf);
     }
 
-    public ByteArrayInputStream citiesPdfReport(String uf) throws IOException {
+    public byte[] citiesPdfReport(String uf) throws IOException {
         return this.placeDataProvider.citiesPdfReport(uf);
     }
 

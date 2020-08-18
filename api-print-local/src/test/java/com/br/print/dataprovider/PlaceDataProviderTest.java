@@ -10,6 +10,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.List;
 
@@ -48,7 +49,8 @@ public class PlaceDataProviderTest {
 
     @Test
     public void citiesPDF__Report__Success__Test() throws IOException {
-        this.placeDataProvider.citiesPdfReport("MG");
+        byte[] reportPDF =  this.placeDataProvider.citiesPdfReport("MG");
+        assertNotNull(reportPDF);
     }
 
 }

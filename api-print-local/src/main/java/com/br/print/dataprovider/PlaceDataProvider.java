@@ -15,7 +15,6 @@ import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.List;
@@ -42,7 +41,7 @@ public class PlaceDataProvider implements PlaceGateway {
         return this.placeFeign.listCitiesByState(uf);
     }
 
-    public ByteArrayInputStream citiesPdfReport(String uf) throws IOException {
+    public byte[] citiesPdfReport(String uf) throws IOException {
         Document document = new Document();
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         List<Object> listCities = this.listCitiesByState(uf);
@@ -131,6 +130,6 @@ public class PlaceDataProvider implements PlaceGateway {
         } finally {
             document.close();
         }
-        return new ByteArrayInputStream(out.toByteArray());
+        return out.toByteArray();
     }
 }
