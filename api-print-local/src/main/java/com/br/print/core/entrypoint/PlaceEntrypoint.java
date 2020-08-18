@@ -62,7 +62,7 @@ public class PlaceEntrypoint {
     @GetMapping(value = "/states/{uf}/cities/pdf", produces = MediaType.APPLICATION_PDF_VALUE)
     public ResponseEntity<byte[]>  listCitiesByStatePdfReport(@PathVariable("uf") String uf)
                                                                          throws IOException {
-        byte[] dataBytes = new byte[512000];
+        byte[] dataBytes = new byte[200000];
         try {
             dataBytes = this.stateUseCase.citiesPdfReport(uf);
         } catch (Exception e) {
