@@ -2,8 +2,6 @@ package com.br.print.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -45,8 +43,8 @@ public class ApiSwaggerConfig extends WebMvcConfigurationSupport {
                 .title("API REST - Print/IBGE Dados")
                 .description("Endpoints dos estados e cidades por UF do Brasil ")
                 .version("1.0.0")
-                .license("Evoluum")
-                .licenseUrl("https://www.evoluum.com.br/")
+                .license("SimplusTec")
+                .licenseUrl("https://simplustec.com/")
                 .build();
     }
 
@@ -60,7 +58,8 @@ public class ApiSwaggerConfig extends WebMvcConfigurationSupport {
 
 
     private SecurityContext securityContext() {
-        return SecurityContext.builder().securityReferences(defaultAuth()).forPaths(PathSelectors.regex("/.*")).build();
+        return SecurityContext.builder().securityReferences(defaultAuth())
+                .forPaths(PathSelectors.regex("/.*")).build();
     }
 
     private List<SecurityReference> defaultAuth() {
