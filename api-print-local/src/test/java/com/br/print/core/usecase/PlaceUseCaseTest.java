@@ -37,7 +37,7 @@ public class PlaceUseCaseTest {
     @Test
     public void listCitiesByStatePDF__Success_Test() throws IOException {
         Mockito.when(this.placeDataProvider.citiesPdfReport("SP"))
-                .thenReturn(Mockito.mock(byte[].class));
+                .thenReturn(new String("teste").getBytes());
         this.placeUseCase.citiesPdfReport("SP");
     }
 
