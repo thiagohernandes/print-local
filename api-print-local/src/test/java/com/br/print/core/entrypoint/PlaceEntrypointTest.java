@@ -42,7 +42,7 @@ public class PlaceEntrypointTest {
     @Before
     public void init() throws Exception {
         gson = new Gson();
-        mockMvc = MockMvcBuilders.standaloneSetup(placeEntrypoint).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(this.placeEntrypoint).build();
     }
 
     @Test
